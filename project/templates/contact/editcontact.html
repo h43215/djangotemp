@@ -1,0 +1,14 @@
+<p>Edit Record Here</p>
+<form action="/Edit/" method="post">
+   {% csrf_token %}
+   <input type="hidden" name="text_id" value="{{data.id}}">
+   <input type="email" name="text_mail" placeholder="Enter email" required="" value="{{data.email}}">
+   <br><br>
+   <input type="number" name="text_mob" placeholder="Enter mobile" value="{{data.mobile}}">
+   <br>
+   <br>
+      <textarea rows="10" cols="20" name="text_massage" placeholder="Enter message" value="{{data.massage}}">{{data.massage}}</textarea>
+      <br>
+      <br>
+      <input type="submit" name="btnsubmit" value="Update" />
+</form>
